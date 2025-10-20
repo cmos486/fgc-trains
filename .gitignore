@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+.Python
+*.egg-info/
+.pytest_cache/
+gtfs_data/
+gtfs_data_backup_*/
+*.log
+.DS_Store

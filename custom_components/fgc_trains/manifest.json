@@ -1,0 +1,12 @@
+{
+  "domain": "fgc_trains",
+  "name": "FGC Trains",
+  "documentation": "https://github.com/cmos486/fgc-trains",
+  "issue_tracker": "https://github.com/cmos486/fgc-trains/issues",
+  "requirements": ["requests>=2.31.0"],
+  "codeowners": ["@cmos486"],
+  "version": "1.0.0",
+  "config_flow": true,
+  "iot_class": "local_polling",
+  "integration_type": "service"
+}

@@ -1,0 +1,36 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configurar FGC Trains",
+        "description": "Configura los horarios de trenes FGC",
+        "data": {
+          "line": "Línea",
+          "origin": "Estación de origen",
+          "destination": "Estación de destino",
+          "gtfs_path": "Ruta datos GTFS (opcional)",
+          "update_interval": "Intervalo actualización (segundos)",
+          "auto_update_gtfs": "Actualizar GTFS automáticamente"
+        }
+      }
+    },
+    "error": {
+      "same_origin_destination": "El origen y destino no pueden ser iguales",
+      "gtfs_download_failed": "Error descargando datos GTFS"
+    },
+    "abort": {
+      "already_configured": "Esta ruta ya está configurada"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opciones FGC Trains",
+        "data": {
+          "update_interval": "Intervalo actualización (segundos)",
+          "auto_update_gtfs": "Actualizar GTFS automáticamente"
+        }
+      }
+    }
+  }
+}
