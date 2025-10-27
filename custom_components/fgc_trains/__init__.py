@@ -26,7 +26,8 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
         entry.data.get("origin", "TR"),
         entry.data.get("destination", "PC"),
         entry.data.get("line", "S1"),
-        entry.data.get("update_interval", DEFAULT_UPDATE_INTERVAL)
+        entry.data.get("update_interval", DEFAULT_UPDATE_INTERVAL),
+        entry.data.get("auto_update", True)  # ← Nuevo parámetro
     )
     
     await coordinator.async_config_entry_first_refresh()
@@ -43,6 +44,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
         success = await hass.async_add_executor_job(update_gtfs, gtfs_path)
         
         if success:
+            coordinator.last_gtfs_update = None  # Forzar nueva descarga en próxima actualización
             await coordinator.async_refresh()
             _LOGGER.info("✅ GTFS actualizado correctamente")
         else:

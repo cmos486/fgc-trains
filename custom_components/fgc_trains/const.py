@@ -6,6 +6,7 @@ PLATFORMS = ["sensor"]
 GTFS_URL = "https://www.fgc.cat/google/google_transit.zip"
 DEFAULT_GTFS_PATH = "/config/custom_components/fgc_trains/gtfs_data"
 DEFAULT_UPDATE_INTERVAL = 60
+DEFAULT_GTFS_UPDATE_DAYS = 1  # Descargar el ZIP cada 1 día
 
 LINES = {
     "S1": "Barcelona - Terrassa",
