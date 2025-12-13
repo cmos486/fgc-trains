@@ -118,7 +118,7 @@ class FGCDataCoordinator(DataUpdateCoordinator):
             with open(stop_times_file, 'r', encoding='utf-8') as f:
                 reader = csv.DictReader(f)
                 for row in reader:
-                    if row['trip_id'] in trip_ids and row['stop_id'] == self.origin:
+                    if row['trip_id'] in trip_ids and row['stop_id'].startswith(self.origin):
                         departure_time = row['departure_time']
                         parts = departure_time.split(':')
                         hours = int(parts[0])
